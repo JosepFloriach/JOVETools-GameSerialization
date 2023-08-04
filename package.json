@@ -1,0 +1,23 @@
+{
+  "name": "com.jovetools.gameserialization",
+  "version": "0.9.0",
+  "displayName": "JOVETools - Game serialization",
+  "description": "Lightweight framework to save and load game data.",
+  "unity": "2019.1",
+  "unityRelease": "0b5",
+  "documentationUrl": "https://example.com/",
+  "changelogUrl": "https://example.com/changelog.html",
+  "licensesUrl": "https://example.com/licensing.html",
+  "keywords": [
+    "JOVE",
+	"JOVEGameSerialization",
+	"joveSerialization",
+    "GameSerialization",
+    "Game Serialization"	
+  ],
+  "author": {
+    "name": "Josep Floriach Ventosinos",
+    "email": "josep.floriach.ventosinos@gmail.com",
+    "url": "https://github.com/JosepFloriach"
+  }
+}
