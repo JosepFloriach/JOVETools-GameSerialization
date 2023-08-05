@@ -42,9 +42,9 @@ public class PersistanceManager<T> where T : IGameData, new()
 
     private List<ISerializable> serializableObjects = new();
 
-    public void Init(string fileName)
+    public void Init(string path, string fileName)
     {
-        fileDataHandler = new FileDataHandler<T>(Application.persistentDataPath, fileName);
+        fileDataHandler = new FileDataHandler<T>(path, fileName);
     }
 
     public void RegisterSerializableObject(ISerializable serializable)
