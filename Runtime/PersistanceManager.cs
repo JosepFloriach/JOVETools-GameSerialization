@@ -41,12 +41,12 @@ namespace jovetools.gameserialization
         public static event Action DataSaved;
 
         private IGameData gameData;
-        private FileDataHandler<T> fileDataHandler;
+        private IDataHandler dataHandler;
         private List<ISerializable> serializableObjects = new();
 
-        public void Init(string path, string fileName)
+        public void Init(IDataHandler dataHandler)
         {
-            fileDataHandler = new FileDataHandler<T>(path, fileName);
+            this.dataHandler = dataHandler;
         }
 
         public void RegisterSerializableObject(ISerializable serializable)
@@ -81,13 +81,13 @@ namespace jovetools.gameserialization
                 throw new Exception("Corrupted game data. No data was saved.");
             }
 
-            fileDataHandler.SaveData(gameData);
+            dataHandler.Save(gameData);
             DataSaved?.Invoke();
         }
 
         public void LoadGame()
         {
-            gameData = fileDataHandler.Load();
+            gameData = dataHandler.Load();
             if (gameData == null)
             {
                 NewGame();
