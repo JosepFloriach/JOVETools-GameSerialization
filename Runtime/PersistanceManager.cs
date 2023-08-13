@@ -59,6 +59,11 @@ namespace jovetools.gameserialization
             serializableObjects.Remove(serializable);
         }
 
+        public void DeregisterAllSerializables()
+        {
+            serializableObjects.Clear();
+        }
+
         public void NewGame()
         {
             this.gameData = new T();
